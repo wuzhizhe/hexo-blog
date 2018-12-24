@@ -1,0 +1,757 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="HTTP安全,响应首部," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="上一篇文章记录了一下X-Frame-Options响应首部，这次记录下其他的与HTTP安全相关的首部字段与信息。 X-XSS-Protection  X-XSS-Protection MDN解释  HTTP X-XSS-Protection 响应头是Internet Explorer，Chrome和Safari的一个功能，当检测到跨站脚本攻击 (XSS)时，浏览器将停止加载页面。虽然这些保护在">
+<meta name="keywords" content="HTTP安全,响应首部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP安全相关响应首部">
+<meta property="og:url" content="http://yoursite.com/2017/06/29/HTTP安全相关响应首部/index.html">
+<meta property="og:site_name" content="木兄博客">
+<meta property="og:description" content="上一篇文章记录了一下X-Frame-Options响应首部，这次记录下其他的与HTTP安全相关的首部字段与信息。 X-XSS-Protection  X-XSS-Protection MDN解释  HTTP X-XSS-Protection 响应头是Internet Explorer，Chrome和Safari的一个功能，当检测到跨站脚本攻击 (XSS)时，浏览器将停止加载页面。虽然这些保护在">
+<meta property="og:updated_time" content="2017-06-29T09:03:12.909Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTTP安全相关响应首部">
+<meta name="twitter:description" content="上一篇文章记录了一下X-Frame-Options响应首部，这次记录下其他的与HTTP安全相关的首部字段与信息。 X-XSS-Protection  X-XSS-Protection MDN解释  HTTP X-XSS-Protection 响应头是Internet Explorer，Chrome和Safari的一个功能，当检测到跨站脚本攻击 (XSS)时，浏览器将停止加载页面。虽然这些保护在">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/29/HTTP安全相关响应首部/"/>
+
+
+
+
+
+  <title> HTTP安全相关响应首部 | 木兄博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">木兄博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">木兄的个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/29/HTTP安全相关响应首部/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="木兄">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木兄博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HTTP安全相关响应首部
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-29T13:09:41+08:00">
+                2017-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/06/29/HTTP安全相关响应首部/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/06/29/HTTP安全相关响应首部/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>  上一篇文章记录了一下X-Frame-Options响应首部，这次记录下其他的与HTTP安全相关的首部字段与信息。</p>
+<h3 id="X-XSS-Protection"><a href="#X-XSS-Protection" class="headerlink" title="X-XSS-Protection"></a>X-XSS-Protection</h3><p>  <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-XSS-Protection" target="_blank" rel="external">X-XSS-Protection MDN解释</a></p>
+<blockquote>
+<p>HTTP X-XSS-Protection 响应头是Internet Explorer，Chrome和Safari的一个功能，当检测到跨站脚本攻击 (XSS)时，浏览器将停止加载页面。虽然这些保护在现代浏览器中基本上是不必要的，当网站实施一个强大的Content-Security-Policy来 禁用内联的JavaScript (‘unsafe-inline’)时, 他们仍然可以为尚不支持 CSP 的旧版浏览器的用户提供保护。</p>
+<p>X-XSS-Protection: 0 禁止XSS过滤。<br>  X-XSS-Protection: 1 启用XSS过滤（通常浏览器是默认的）。 如果检测到跨站脚本攻击，浏览器将清除页面（删除不安全的部分）。<br>  X-XSS-Protection: 1; mode=block 启用XSS过滤。 如果检测到攻击，浏览器将不会清除页面，而是阻止页面加载。<br>  X-XSS-Protection: 1; report=<reporting-uri> 启用XSS过滤。 如果检测到跨站脚本攻击，浏览器将清除页面并使用CSP report-uri指令的功能发送违规报告。</reporting-uri></p>
+</blockquote>
+<p>  Nginx配置方法：add_header X-XSS-Protection “1; mode=block”;</p>
+<h3 id="X-Content-Type-Options"><a href="#X-Content-Type-Options" class="headerlink" title="X-Content-Type-Options"></a>X-Content-Type-Options</h3><p>  <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Content-Type-Options" target="_blank" rel="external">X-Content-Type-Options MDN解释</a></p>
+<blockquote>
+<p>X-Content-Type-Options 响应首部相当于一个提示标志，被服务器用来提示客户端一定要遵循在 Content-Type 首部中对  MIME 类型 的设定，而不能对其进行修改。这就禁用了客户端的 MIME 类型嗅探行为，换句话说，也就是意味着网站管理员确定自己的设置没有问题。</p>
+<p>X-Content-Type-Options: nosniff<br>  nosniff<br>  假如请求类型为以下两种，那么阻止请求的发生：<br>  “style” 但是 MIME 类型不是 “text/css”，<br>  “script” 但是 MIME 类型不是  JavaScript MIME 类型。</p>
+</blockquote>
+<p>  这个首部主要解决的问题是MIME嗅探问题。</p>
+<p>  MIME嗅探是什么呢？MIME嗅探是浏览器对接收到的文件类型（可能传输说明的是text，但是实际上却是image）进行解析，然后按照自己解析出来的文件类型进行处理，目的是为了解决有些文件类型错误导致无法正确显示或者执行的问题。</p>
+<p>  好心但是带来了大问题，因为按照自己嗅探的结果执行那就有了被攻击的可能，比如一个上传图片的过程，图片上传时实际上是一个js，MIME嗅探完毕后认为这个是JS，然后就执行js代码，js为XSS等攻击代码，导致问题出现。</p>
+<p>  有了X-Content-Type-Options的设置，要求客户端一定遵循content-type的设定，那么就能够比较好的解决这个问题，不让坏人有机可乘。</p>
+<p>  Nginx配置：add_header X-Content-Type-Options nosniff;</p>
+<h3 id="Strict-Transport-Security"><a href="#Strict-Transport-Security" class="headerlink" title="Strict-Transport-Security"></a>Strict-Transport-Security</h3><p>  <a href="https://developer.mozilla.org/zh-CN/docs/Security/HTTP_Strict_Transport_Security" target="_blank" rel="external">Strict-Transport-Security MDN解释</a></p>
+<blockquote>
+<p>HTTP Strict Transport Security (通常简称为HSTS) 是一个安全功能，它告诉浏览器只能通过HTTPS访问当前资源, 禁止HTTP方式.</p>
+</blockquote>
+<p>  HTTPS比HTTP安全这个就不用说了，嘿嘿，启用这个的好处也就不多说了，本博客也是启用了HSTS的，强制不允许HTTP访问。</p>
+<p>  语法：</p>
+<blockquote>
+<p>Strict-Transport-Security: max-age=expireTime [; includeSubdomains]</p>
+</blockquote>
+<p>  max-age设置过期时间，单位是秒，includeSubdomains是是否包含过子域名的意思。</p>
+<p>  Nginx配置: add_header Strict-Transport-Security “max-age=31536000; includeSubDomains” always;</p>
+<h3 id="Content-Security-Policy"><a href="#Content-Security-Policy" class="headerlink" title="Content-Security-Policy"></a>Content-Security-Policy</h3><p>  这个叫“内容安全政策”，最终设置的东西也会展示在Response Header里，内容比较多，建议直接上MDN学习，给出的很详细，网址如下:</p>
+<p>  <a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/CSP/Using_Content_Security_Policy" target="_blank" rel="external">Content-Security-Policy MDN解释</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTTP安全/" rel="tag"># HTTP安全</a>
+          
+            <a href="/tags/响应首部/" rel="tag"># 响应首部</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/27/Cache-Control与Nginx配置/" rel="next" title="Cache-Control与Nginx配置">
+                <i class="fa fa-chevron-left"></i> Cache-Control与Nginx配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/29/HTTP首部之X-Frame-Options/" rel="prev" title="HTTP首部之X-Frame-Options">
+                HTTP首部之X-Frame-Options <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="木兄" />
+          <p class="site-author-name" itemprop="name">木兄</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#X-XSS-Protection"><span class="nav-number">1.</span> <span class="nav-text">X-XSS-Protection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#X-Content-Type-Options"><span class="nav-number">2.</span> <span class="nav-text">X-Content-Type-Options</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Strict-Transport-Security"><span class="nav-number">3.</span> <span class="nav-text">Strict-Transport-Security</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Content-Security-Policy"><span class="nav-number">4.</span> <span class="nav-text">Content-Security-Policy</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">木兄</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_page_pv" style="margin-left: 20px;">
+  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+</span>
+
+<span id="busuanzi_container_site_uv" style="margin-left: 20px;">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://dazhizhe.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/06/29/HTTP安全相关响应首部/';
+          this.page.identifier = '2017/06/29/HTTP安全相关响应首部/';
+          this.page.title = 'HTTP安全相关响应首部';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://dazhizhe.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

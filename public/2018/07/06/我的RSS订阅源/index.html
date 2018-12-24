@@ -1,0 +1,756 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="开篇唠叨  好久不写博客了，一个是人自己的惰性，另一个确实也可写的东西比较少，坚持下来真的是很不容易啊。   之前写过一篇“关于订阅内容的反思”，记录了自己关于订阅源的管理的想法，现在想记录下自己的订阅源，以后有更新有删除都在这里进行记录，其实这篇文章相比之前那篇文章的订阅源已经发生过变化了。 应该订阅什么样的RSS源  个人认为订阅源应分为两种：一种是有价值的订阅源，能让自己从中有比较好的收获；">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的RSS订阅源">
+<meta property="og:url" content="http://yoursite.com/2018/07/06/我的RSS订阅源/index.html">
+<meta property="og:site_name" content="木兄博客">
+<meta property="og:description" content="开篇唠叨  好久不写博客了，一个是人自己的惰性，另一个确实也可写的东西比较少，坚持下来真的是很不容易啊。   之前写过一篇“关于订阅内容的反思”，记录了自己关于订阅源的管理的想法，现在想记录下自己的订阅源，以后有更新有删除都在这里进行记录，其实这篇文章相比之前那篇文章的订阅源已经发生过变化了。 应该订阅什么样的RSS源  个人认为订阅源应分为两种：一种是有价值的订阅源，能让自己从中有比较好的收获；">
+<meta property="og:updated_time" content="2018-07-06T08:54:44.442Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的RSS订阅源">
+<meta name="twitter:description" content="开篇唠叨  好久不写博客了，一个是人自己的惰性，另一个确实也可写的东西比较少，坚持下来真的是很不容易啊。   之前写过一篇“关于订阅内容的反思”，记录了自己关于订阅源的管理的想法，现在想记录下自己的订阅源，以后有更新有删除都在这里进行记录，其实这篇文章相比之前那篇文章的订阅源已经发生过变化了。 应该订阅什么样的RSS源  个人认为订阅源应分为两种：一种是有价值的订阅源，能让自己从中有比较好的收获；">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/06/我的RSS订阅源/"/>
+
+
+
+
+
+  <title> 我的RSS订阅源 | 木兄博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">木兄博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">木兄的个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/06/我的RSS订阅源/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="木兄">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木兄博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                我的RSS订阅源
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-06T16:21:20+08:00">
+                2018-07-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/06/我的RSS订阅源/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/07/06/我的RSS订阅源/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="开篇唠叨"><a href="#开篇唠叨" class="headerlink" title="开篇唠叨"></a>开篇唠叨</h2><p>  好久不写博客了，一个是人自己的惰性，另一个确实也可写的东西比较少，坚持下来真的是很不容易啊。</p>
+<p>  之前写过一篇“关于订阅内容的反思”，记录了自己关于订阅源的管理的想法，现在想记录下自己的订阅源，以后有更新有删除都在这里进行记录，其实这篇文章相比之前那篇文章的订阅源已经发生过变化了。</p>
+<h2 id="应该订阅什么样的RSS源"><a href="#应该订阅什么样的RSS源" class="headerlink" title="应该订阅什么样的RSS源"></a>应该订阅什么样的RSS源</h2><p>  个人认为订阅源应分为两种：一种是有价值的订阅源，能让自己从中有比较好的收获；另一种不一定能让你有多大的收获，但是是你感兴趣的东西（感兴趣的不一定是有价值的）。</p>
+<h2 id="具体的订阅源"><a href="#具体的订阅源" class="headerlink" title="具体的订阅源"></a>具体的订阅源</h2><h3 id="新闻媒体类"><a href="#新闻媒体类" class="headerlink" title="新闻媒体类"></a>新闻媒体类</h3><ul>
+<li>纽约时报中文网</li>
+<li>金融时报中文网</li>
+<li><p>虎嗅网</p>
+<p>这个是我目前订阅的三个主要的新闻媒体网站，因为我几乎不看新闻客户端，自己感兴趣的内容会去专门的论坛或者门户网站对应的板块进行信息获取，主要的新闻媒体信息获取就来源于以上几个网站（剩下的就是twitter了）。</p>
+</li>
+</ul>
+<h3 id="软件-工具信息分享类"><a href="#软件-工具信息分享类" class="headerlink" title="软件/工具信息分享类"></a>软件/工具信息分享类</h3><ul>
+<li>免费资源网络社群（台湾站长制作）</li>
+<li>反斗软件</li>
+<li>大眼旭仔</li>
+<li>异次元世界</li>
+<li>电脑玩物（台湾站长制作）</li>
+<li>小众软件</li>
+</ul>
+<h3 id="生活历史类"><a href="#生活历史类" class="headerlink" title="生活历史类"></a>生活历史类</h3><ul>
+<li>凤凰号-我们爱历史（凤凰网板块）</li>
+<li>中国特色。NET（个人网站）</li>
+<li>时拾史事</li>
+<li>历史·时事·军事地图（新浪个人博客）</li>
+</ul>
+<h3 id="IT编程开发类"><a href="#IT编程开发类" class="headerlink" title="IT编程开发类"></a>IT编程开发类</h3><ul>
+<li>张鑫旭博客</li>
+<li>酷壳</li>
+<li>w3cplus博客（应该也是个人站）</li>
+<li>infoQ HTML5板块</li>
+<li>jerryQu博客</li>
+<li>月光博客</li>
+</ul>
+<h3 id="其他不知如何分类的"><a href="#其他不知如何分类的" class="headerlink" title="其他不知如何分类的"></a>其他不知如何分类的</h3><ul>
+<li>唐巧博客</li>
+<li>奔跑的奶酪</li>
+<li>魏武挥扯氮集</li>
+<li>编程随想</li>
+<li>Mactalk</li>
+<li>V2ex部分模块</li>
+</ul>
+<p>以上就是目前订阅的RSS源，在整理期间发现有些已经好久不更新也不看的源，这种源已经没有存在的必要，直接删除。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/15/离线下载工具offcloud介绍/" rel="prev" title="离线下载工具offcloud介绍">
+                离线下载工具offcloud介绍 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="木兄" />
+          <p class="site-author-name" itemprop="name">木兄</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开篇唠叨"><span class="nav-number">1.</span> <span class="nav-text">开篇唠叨</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应该订阅什么样的RSS源"><span class="nav-number">2.</span> <span class="nav-text">应该订阅什么样的RSS源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体的订阅源"><span class="nav-number">3.</span> <span class="nav-text">具体的订阅源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新闻媒体类"><span class="nav-number">3.1.</span> <span class="nav-text">新闻媒体类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件-工具信息分享类"><span class="nav-number">3.2.</span> <span class="nav-text">软件/工具信息分享类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生活历史类"><span class="nav-number">3.3.</span> <span class="nav-text">生活历史类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IT编程开发类"><span class="nav-number">3.4.</span> <span class="nav-text">IT编程开发类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他不知如何分类的"><span class="nav-number">3.5.</span> <span class="nav-text">其他不知如何分类的</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">木兄</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_page_pv" style="margin-left: 20px;">
+  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+</span>
+
+<span id="busuanzi_container_site_uv" style="margin-left: 20px;">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://dazhizhe.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/07/06/我的RSS订阅源/';
+          this.page.identifier = '2018/07/06/我的RSS订阅源/';
+          this.page.title = '我的RSS订阅源';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://dazhizhe.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

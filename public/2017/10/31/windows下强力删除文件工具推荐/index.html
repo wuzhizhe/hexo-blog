@@ -1,0 +1,756 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="windows,卸载,强制," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="文件无法删除的烦恼  好久没有遇到这种情况了，今天下载了一个便携软件，免安装，下载下来后试用，发现不好用，于是退出软件，然后删除软件，这个时候恶心的事情发生了，进程占用，无法删除软件，于是只能找工具进行强力删除。   多吐槽一句，软件官方发布的这种便携软件，不是第三方的人修改的，竟然在退出软件后还存在进程不退出继续占用的问题，要么是别有用心的在后台做什么事情，要么就说明软件开发的时候这些细节处理不">
+<meta name="keywords" content="windows,卸载,强制">
+<meta property="og:type" content="article">
+<meta property="og:title" content="windows下强力删除文件工具推荐">
+<meta property="og:url" content="http://yoursite.com/2017/10/31/windows下强力删除文件工具推荐/index.html">
+<meta property="og:site_name" content="木兄博客">
+<meta property="og:description" content="文件无法删除的烦恼  好久没有遇到这种情况了，今天下载了一个便携软件，免安装，下载下来后试用，发现不好用，于是退出软件，然后删除软件，这个时候恶心的事情发生了，进程占用，无法删除软件，于是只能找工具进行强力删除。   多吐槽一句，软件官方发布的这种便携软件，不是第三方的人修改的，竟然在退出软件后还存在进程不退出继续占用的问题，要么是别有用心的在后台做什么事情，要么就说明软件开发的时候这些细节处理不">
+<meta property="og:image" content="http://yoursite.com/images/force-delete-file/lockhunter1.png">
+<meta property="og:image" content="http://yoursite.com/images/force-delete-file/lockhunter2.png">
+<meta property="og:image" content="http://yoursite.com/images/force-delete-file/lockhunter3.png">
+<meta property="og:image" content="http://yoursite.com/images/force-delete-file/lockhunter4.png">
+<meta property="og:updated_time" content="2017-10-31T09:44:59.543Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="windows下强力删除文件工具推荐">
+<meta name="twitter:description" content="文件无法删除的烦恼  好久没有遇到这种情况了，今天下载了一个便携软件，免安装，下载下来后试用，发现不好用，于是退出软件，然后删除软件，这个时候恶心的事情发生了，进程占用，无法删除软件，于是只能找工具进行强力删除。   多吐槽一句，软件官方发布的这种便携软件，不是第三方的人修改的，竟然在退出软件后还存在进程不退出继续占用的问题，要么是别有用心的在后台做什么事情，要么就说明软件开发的时候这些细节处理不">
+<meta name="twitter:image" content="http://yoursite.com/images/force-delete-file/lockhunter1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/10/31/windows下强力删除文件工具推荐/"/>
+
+
+
+
+
+  <title> windows下强力删除文件工具推荐 | 木兄博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">木兄博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">木兄的个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/31/windows下强力删除文件工具推荐/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="木兄">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木兄博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                windows下强力删除文件工具推荐
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-31T17:08:03+08:00">
+                2017-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/31/windows下强力删除文件工具推荐/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/10/31/windows下强力删除文件工具推荐/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="文件无法删除的烦恼"><a href="#文件无法删除的烦恼" class="headerlink" title="文件无法删除的烦恼"></a>文件无法删除的烦恼</h2><p>  好久没有遇到这种情况了，今天下载了一个便携软件，免安装，下载下来后试用，发现不好用，于是退出软件，然后删除软件，这个时候恶心的事情发生了，进程占用，无法删除软件，于是只能找工具进行强力删除。</p>
+<p>  多吐槽一句，软件官方发布的这种便携软件，不是第三方的人修改的，竟然在退出软件后还存在进程不退出继续占用的问题，要么是别有用心的在后台做什么事情，要么就说明软件开发的时候这些细节处理不好。总之一句话：坑货软件。</p>
+<h2 id="如何利用工具强制删除被锁定的文件"><a href="#如何利用工具强制删除被锁定的文件" class="headerlink" title="如何利用工具强制删除被锁定的文件"></a>如何利用工具强制删除被锁定的文件</h2><h3 id="杀死占用进程"><a href="#杀死占用进程" class="headerlink" title="杀死占用进程"></a>杀死占用进程</h3><p>  找到占用文件的进程，杀死进程，然后删除文件。这个是第一想法，因为删除的时候说了，因为某些进程正在使用它所以无法删除，所以第一想到的方法就是找到占用的进程，然后杀死进程，杀死进程后就可以删除了。</p>
+<p>  有这样的工具吗？</p>
+<p>  答案是：有。</p>
+<p>  什么名字呢？</p>
+<p>  lockhunter。</p>
+<p>  官网<a href="http://lockhunter.com/" target="_blank" rel="external">lockhunter.com</a></p>
+<p>  直接去官网下载即可，请不要到国内的那些软件园/下载网站去下载，直接去官网下载。</p>
+<p>  安装完成后对着要删除的文件/目录右键，如下图：</p>
+<p>  <img src="/images/force-delete-file/lockhunter1.png" alt="001"></p>
+<p>  右键后点击对应的菜单，可以看到当前正在占用文件/目录的进程文件：</p>
+<p>  <img src="/images/force-delete-file/lockhunter2.png" alt="003"></p>
+<p>  对进程文件右键，有对应的操作菜单显示，有三个选项，第一个是unlock占用的进程，我试过这个基本没用，然后就是第二个，杀死占用的进程，这个一般可用，如果不能用也可以试试第三个直接删除占用的进程文件。</p>
+<p>  <img src="/images/force-delete-file/lockhunter3.png" alt="002"></p>
+<p>  一般无法删除的文件用这个工具就行了，但是我发现，这个工具也有不可用的时候，于是又找到了另一款更加强力的工具。</p>
+<h3 id="暴力删除所有要删除的文件"><a href="#暴力删除所有要删除的文件" class="headerlink" title="暴力删除所有要删除的文件"></a>暴力删除所有要删除的文件</h3><p>  这个工具是FileASSASSIN，打开工具后，找到你想删除的文件：直接暴力删除。</p>
+<p>  个人感觉非常好用。</p>
+<p>  官网地址：<a href="https://www.malwarebytes.com/fileassassin/" target="_blank" rel="external">FILEASSASSIN</a></p>
+<p>  软件介绍就一句话：Eradicates any type of locked files————彻底删除任何类型的锁定文件。</p>
+<p>  软件界面如下图：</p>
+<p>  <img src="/images/force-delete-file/lockhunter4.png" alt="002"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/windows/" rel="tag"># windows</a>
+          
+            <a href="/tags/卸载/" rel="tag"># 卸载</a>
+          
+            <a href="/tags/强制/" rel="tag"># 强制</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/15/离线下载工具offcloud介绍/" rel="next" title="离线下载工具offcloud介绍">
+                <i class="fa fa-chevron-left"></i> 离线下载工具offcloud介绍
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/31/如何让博客支持HTTPS协议/" rel="prev" title="如何让博客支持HTTPS协议(2017-10-31更新cerbot工具)">
+                如何让博客支持HTTPS协议(2017-10-31更新cerbot工具) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="木兄" />
+          <p class="site-author-name" itemprop="name">木兄</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件无法删除的烦恼"><span class="nav-number">1.</span> <span class="nav-text">文件无法删除的烦恼</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何利用工具强制删除被锁定的文件"><span class="nav-number">2.</span> <span class="nav-text">如何利用工具强制删除被锁定的文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#杀死占用进程"><span class="nav-number">2.1.</span> <span class="nav-text">杀死占用进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#暴力删除所有要删除的文件"><span class="nav-number">2.2.</span> <span class="nav-text">暴力删除所有要删除的文件</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">木兄</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<span id="busuanzi_container_page_pv" style="margin-left: 20px;">
+  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+</span>
+
+<span id="busuanzi_container_site_uv" style="margin-left: 20px;">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://dazhizhe.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/10/31/windows下强力删除文件工具推荐/';
+          this.page.identifier = '2017/10/31/windows下强力删除文件工具推荐/';
+          this.page.title = 'windows下强力删除文件工具推荐';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://dazhizhe.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
