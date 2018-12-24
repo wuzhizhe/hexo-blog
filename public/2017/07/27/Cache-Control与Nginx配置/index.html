@@ -6,15 +6,15 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -32,7 +32,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -66,21 +66,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="cache-control,nginx,proxy_cache," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="cache-control,nginx,proxy_cache,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
 
 
 
@@ -94,6 +94,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/27/Cache-Control与Nginx配置/index.html">
 <meta property="og:site_name" content="木兄博客">
 <meta property="og:description" content="缓存相关问题  项目上最近要处理前端缓存的问题，因为缓存之前一直没有处理好，所以就是时不时的有点问题，经常因为缓存不更新导致访问的都是旧数据。   这里其实分为两个地方要处理的缓存，第一个是浏览器本身的缓存，第二个是Http代理服务器（这里用Nginx）的缓存问题。 浏览器配置缓存策略以及导致的问题  chrome浏览器默认缓存，如果http服务器没有显式的设置缓存的策略，那么浏览器将会自动缓存g">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-07-27T09:13:38.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cache-Control与Nginx配置">
@@ -125,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/27/Cache-Control与Nginx配置/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/27/Cache-Control与Nginx配置/">
 
 
 
@@ -134,7 +135,7 @@
   <title> Cache-Control与Nginx配置 | 木兄博客 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -159,13 +160,13 @@
   <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">木兄博客</span>
         <span class="logo-line-after"><i></i></span>
@@ -195,7 +196,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -205,7 +206,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -215,7 +216,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -249,16 +250,16 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/27/Cache-Control与Nginx配置/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="木兄">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="木兄博客">
     </span>
 
@@ -306,8 +307,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/07/27/Cache-Control与Nginx配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/27/Cache-Control与Nginx配置/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/07/27/Cache-Control与Nginx配置/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -339,15 +339,15 @@
 <p>  这就导致了新数据、图片、CSS等不生效。</p>
 <p>  一开始通过前端代码的方式来解决这些问题，请求url后面加上一个时间戳类似的数据串，这样每次请求的数据不一样也就不会有缓存的问题，用此来解决总是不刷新缓存的问题。<br>  但是现在项目的代码是纯静态代码，HTML的，不是模板生成的，也不是PHP这一类的，所以有些文件不能用动态的字符串来修改请求的URL了，最明显的例子就是HTML中的img标签，或者css里的一些background的url等，这些内容纯静态，只能写死，这种文件一旦更新就会有缓存的问题，缓存更新不及时好像程序有问题。</p>
 <h2 id="HTTP-SERVER配置浏览器缓存策略"><a href="#HTTP-SERVER配置浏览器缓存策略" class="headerlink" title="HTTP SERVER配置浏览器缓存策略"></a>HTTP SERVER配置浏览器缓存策略</h2><p>  因为浏览器的缓存策略是有Cache-Control控制的，所以需要在HTTP SERVER的Response Header里设置Cache-Control，HTTP SERVER控制了缓存策略，这样就能处理浏览器的缓存了。<br>  Cache-Control不在这里详细展开，简单说下，缓存的设置有这几种策略：no-store(不缓存) no-cache(每次请求时检查缓存是否过期，如果过期，获取新内容) 以及其他的一些设置。</p>
-<p>  Nginx的配置: add_header Cache-Control ‘no-cache’;<br>  最好配置在每个location里面，不同的location有不同的缓存策略。<br>  MDN上简单介绍了<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control" target="_blank" rel="external">Cache-Control</a>，与Cache-Control相关的还有Expires Pragma 返回头的指令。不在此展开。</p>
+<p>  Nginx的配置: add_header Cache-Control ‘no-cache’;<br>  最好配置在每个location里面，不同的location有不同的缓存策略。<br>  MDN上简单介绍了<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control" target="_blank" rel="noopener">Cache-Control</a>，与Cache-Control相关的还有Expires Pragma 返回头的指令。不在此展开。</p>
 <p>  Nginx HTTP模块相关配置：</p>
 <h2 id="HTTP-SERVER配置本身的缓存策略"><a href="#HTTP-SERVER配置本身的缓存策略" class="headerlink" title="HTTP SERVER配置本身的缓存策略"></a>HTTP SERVER配置本身的缓存策略</h2><p>  HTTP SERVER除了可以控制浏览器的缓存策略之外，还可以配置自己作为缓存代理服务器的缓存策略。</p>
 <p>  这种模式下的Nginx是一个简单的反向代理服务器并不是一个纯粹的HTTP SERVER。浏览器请求模式大概如下：</p>
 <p>  Browser Client —–&gt;  Nginx Proxy —–&gt; Apache (or other) Http server</p>
 <p>  这里的Nginx就是一个反向代理，既然是代理就可以设置缓存，这里的缓存就是proxy_cache。</p>
 <p>  设置如下：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"># 以下的在http 模块里</div><div class="line"></div><div class="line">proxy_buffering on;</div><div class="line">proxy_cache_path D:/comproject/cache levels=1:2 keys_zone=my_cache:10m max_size=10g inactive=10s use_temp_path=off;</div><div class="line">proxy_cache_methods GET HEAD POST;</div><div class="line"></div><div class="line"># 这些在具体的location模块里：</div><div class="line">proxy_cache my_cache;</div><div class="line">proxy_cache_revalidate on;</div><div class="line">proxy_cache_min_uses 1;</div><div class="line">proxy_cache_key $host$uri$is_args$args;</div><div class="line">proxy_cache_use_stale error timeout updating invalid_header http_500 http_502 http_503 http_504;</div><div class="line">proxy_cache_valid 200 10s;</div><div class="line">expires 10s;</div><div class="line">add_header Cache-Control 'no-cache';</div><div class="line">proxy_pass http://fdp;</div></pre></td></tr></table></figure>
-<p>  上面设置缓存的路径，缓存的方法以及其他的配置都在官网，具体的可以看<a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html" target="_blank" rel="external">nginx官网</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 以下的在http 模块里</span><br><span class="line"></span><br><span class="line">proxy_buffering on;</span><br><span class="line">proxy_cache_path D:<span class="regexp">/comproject/</span>cache levels=<span class="number">1</span>:<span class="number">2</span> keys_zone=my_cache:<span class="number">10</span>m max_size=<span class="number">10</span>g inactive=<span class="number">10</span>s use_temp_path=off;</span><br><span class="line">proxy_cache_methods GET HEAD POST;</span><br><span class="line"></span><br><span class="line"># 这些在具体的location模块里：</span><br><span class="line">proxy_cache my_cache;</span><br><span class="line">proxy_cache_revalidate on;</span><br><span class="line">proxy_cache_min_uses <span class="number">1</span>;</span><br><span class="line">proxy_cache_key $host$uri$is_args$args;</span><br><span class="line">proxy_cache_use_stale error timeout updating invalid_header http_500 http_502 http_503 http_504;</span><br><span class="line">proxy_cache_valid <span class="number">200</span> <span class="number">10</span>s;</span><br><span class="line">expires <span class="number">10</span>s;</span><br><span class="line">add_header Cache-Control <span class="string">'no-cache'</span>;</span><br><span class="line">proxy_pass http:<span class="comment">//fdp;</span></span><br></pre></td></tr></table></figure>
+<p>  上面设置缓存的路径，缓存的方法以及其他的配置都在官网，具体的可以看<a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html" target="_blank" rel="noopener">nginx官网</a></p>
 <p>  这里有个关键点就是必须有后面的HTTP SERVER，在Nginx用upstream与proxy_pass来配置，这样就是一个代理服务器了，可以缓存数据了。</p>
 
       
@@ -395,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/04/旋风要倒下了，怀念下以前的下载生活/" rel="next" title="旋风要倒下了，怀念下以前的下载生活">
-                <i class="fa fa-chevron-left"></i> 旋风要倒下了，怀念下以前的下载生活
+              <a href="/2017/06/29/HTTP安全相关响应首部/" rel="next" title="HTTP安全相关响应首部">
+                <i class="fa fa-chevron-left"></i> HTTP安全相关响应首部
               </a>
             
           </div>
@@ -405,8 +405,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/29/HTTP安全相关响应首部/" rel="prev" title="HTTP安全相关响应首部">
-                HTTP安全相关响应首部 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/04/旋风要倒下了，怀念下以前的下载生活/" rel="prev" title="旋风要倒下了，怀念下以前的下载生活">
+                旋风要倒下了，怀念下以前的下载生活 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -462,7 +462,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -472,10 +472,8 @@
       
 
       <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="木兄" />
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="木兄">
           <p class="site-author-name" itemprop="name">木兄</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
@@ -486,7 +484,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -499,7 +497,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">55</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -554,7 +552,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy; 
   <span itemprop="copyrightYear">2018</span>

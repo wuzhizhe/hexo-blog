@@ -70,6 +70,6 @@ theme: hexo-theme-next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/wuzhizhe/wuzhizhe.github.io.git
+  repo: git@github.com:wuzhizhe/wuzhizhe.github.io.git
   branch: master
   message: 'new content update and commit'

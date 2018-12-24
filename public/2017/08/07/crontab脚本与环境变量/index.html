@@ -6,15 +6,15 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -32,7 +32,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -66,21 +66,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="linux,环境变量,crobtab," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="linux,环境变量,crobtab,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
 
 
 
@@ -94,6 +94,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/07/crontab脚本与环境变量/index.html">
 <meta property="og:site_name" content="木兄博客">
 <meta property="og:description" content="最近在执行linux script的时候发现原来自己写的脚本可以正常执行，但是放在crontab的时候就不能正常执行了。   于是查找原因，想起之前学习shell的时候书中说最好把PATH变量设置一下，防止有些因为PATH的问题导致无法执行，但是脚本又没有问题。   哈哈哈，最终一番查找，终于确定了是PATH问题，要么用绝对路径解决问题，要么设置PATH变量。   脚本一开始是没有问题的，因为">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-08-07T03:32:06.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="crontab脚本与环境变量">
@@ -125,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/07/crontab脚本与环境变量/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/07/crontab脚本与环境变量/">
 
 
 
@@ -134,7 +135,7 @@
   <title> crontab脚本与环境变量 | 木兄博客 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -159,13 +160,13 @@
   <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">木兄博客</span>
         <span class="logo-line-after"><i></i></span>
@@ -195,7 +196,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -205,7 +206,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -215,7 +216,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -249,16 +250,16 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/07/crontab脚本与环境变量/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="木兄">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="木兄博客">
     </span>
 
@@ -306,8 +307,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/08/07/crontab脚本与环境变量/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/07/crontab脚本与环境变量/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/08/07/crontab脚本与环境变量/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -340,7 +340,7 @@
 <p>  所以还是按照书上要求的给脚本老老实实的加上了PATH变量设置。</p>
 <p>  这个事情还是要记录下，很多东西都是以往的人的经验的总结，所以还是要认真的听取的，不应该自己大意，可能一时能记住并遵守，但是时间长了可能就忘了，就好比好脑子不如烂笔头，这个就是经验真的很重要，要重视，可以帮忙避免很多不必要的麻烦。</p>
 <p>  关于crontab的一些其他问题这里还有一篇写的不错的文章，做个链接引用过来了，是51的一篇博客。</p>
-<p>  <a href="http://skypegnu1.blog.51cto.com/8991766/1428632" target="_blank" rel="external">Linux基础：crontab 与 环境变量，以及应该注意的问题</a></p>
+<p>  <a href="http://skypegnu1.blog.51cto.com/8991766/1428632" target="_blank" rel="noopener">Linux基础：crontab 与 环境变量，以及应该注意的问题</a></p>
 
       
     </div>
@@ -387,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/31/CSS设置块内元素垂直排列布局/" rel="next" title="CSS设置块内元素垂直排列布局">
-                <i class="fa fa-chevron-left"></i> CSS设置块内元素垂直排列布局
+              <a href="/2017/08/04/旋风要倒下了，怀念下以前的下载生活/" rel="next" title="旋风要倒下了，怀念下以前的下载生活">
+                <i class="fa fa-chevron-left"></i> 旋风要倒下了，怀念下以前的下载生活
               </a>
             
           </div>
@@ -397,8 +397,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/04/旋风要倒下了，怀念下以前的下载生活/" rel="prev" title="旋风要倒下了，怀念下以前的下载生活">
-                旋风要倒下了，怀念下以前的下载生活 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/31/CSS设置块内元素垂直排列布局/" rel="prev" title="CSS设置块内元素垂直排列布局">
+                CSS设置块内元素垂直排列布局 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -455,10 +455,8 @@
       
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="木兄" />
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="木兄">
           <p class="site-author-name" itemprop="name">木兄</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
@@ -469,7 +467,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -482,7 +480,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">55</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -521,7 +519,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy; 
   <span itemprop="copyrightYear">2018</span>

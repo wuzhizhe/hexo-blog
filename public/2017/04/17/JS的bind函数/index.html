@@ -6,15 +6,15 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -32,7 +32,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -66,21 +66,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
 
 
 
@@ -88,12 +88,12 @@
 
 
 <meta name="description" content="今天看到谷歌developer的官方文档，看到了对bind方法的运用，这个函数可以创建一个新的函数，并且通过传递参数修改原函数的this对象，可以修改this对象也就表示可以传递原来函数本身，bind函数的第一个函数必须是要修改的对象，而后面的参数才是原来的函数使用的参数。   MDN官网的解释：  bind()方法会创建一个新函数。当这个新函数被调用时，bind()的第一个参数将作为它运行时">
-<meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS的bind函数">
 <meta property="og:url" content="http://yoursite.com/2017/04/17/JS的bind函数/index.html">
 <meta property="og:site_name" content="木兄博客">
 <meta property="og:description" content="今天看到谷歌developer的官方文档，看到了对bind方法的运用，这个函数可以创建一个新的函数，并且通过传递参数修改原函数的this对象，可以修改this对象也就表示可以传递原来函数本身，bind函数的第一个函数必须是要修改的对象，而后面的参数才是原来的函数使用的参数。   MDN官网的解释：  bind()方法会创建一个新函数。当这个新函数被调用时，bind()的第一个参数将作为它运行时">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-04-17T03:09:31.089Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS的bind函数">
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/17/JS的bind函数/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/17/JS的bind函数/">
 
 
 
@@ -134,7 +134,7 @@
   <title> JS的bind函数 | 木兄博客 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -159,13 +159,13 @@
   <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">木兄博客</span>
         <span class="logo-line-after"><i></i></span>
@@ -195,7 +195,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -205,7 +205,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -215,7 +215,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -249,16 +249,16 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/17/JS的bind函数/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="木兄">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="木兄博客">
     </span>
 
@@ -306,8 +306,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/04/17/JS的bind函数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/17/JS的bind函数/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/04/17/JS的bind函数/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -338,10 +337,10 @@
 <blockquote>
 <p>bind()方法会创建一个新函数。当这个新函数被调用时，bind()的第一个参数将作为它运行时的 this, 之后的一序列参数将会在传递的实参前传入作为它的参数。</p>
 </blockquote>
-<p>  <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" target="_blank" rel="external">Function.prototype.bind链接</a></p>
+<p>  <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" target="_blank" rel="noopener">Function.prototype.bind链接</a></p>
 <p>这里插入下之前部分代码示例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">spawn</span>(<span class="params">generatorFunc</span>) </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">continuer</span>(<span class="params">verb, arg</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> result;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">      result = generator[verb](arg);</div><div class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(err);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (result.done) &#123;</div><div class="line">      <span class="keyword">return</span> result.value;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(result.value).then(callback, errback);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">var</span> generator = generatorFunc();</div><div class="line">  <span class="keyword">var</span> callback = continuer.bind(continuer, <span class="string">"next"</span>);</div><div class="line">  <span class="keyword">var</span> errback = continuer.bind(continuer, <span class="string">"throw"</span>);</div><div class="line">  <span class="keyword">return</span> callback();</div><div class="line">&#125;</div><div class="line"></div><div class="line">spawn(<span class="function"><span class="keyword">function</span> *(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">  "use strict"</span>;</div><div class="line">  <span class="keyword">try</span> &#123;</div><div class="line">    <span class="comment">// 'yield' effectively does an async wait, returning the result of the promise</span></div><div class="line">    <span class="keyword">let</span> story = <span class="keyword">yield</span> getJson(<span class="string">'story.json'</span>);</div><div class="line">    addHtmlToPage(story.heading);</div><div class="line">    <span class="comment">// Map our array of chapter urls</span></div><div class="line">    <span class="comment">// to an array of chapter json promises.</span></div><div class="line">    <span class="comment">// This makes sure they all download parallel.</span></div><div class="line">    <span class="keyword">let</span> chapterPromises = story.chapterUrls.map(getJson);</div><div class="line">    <span class="comment">// Can't use chapterPromises.forEach, because yielding within doesn't work</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, chapterPromise; chapterPromise = chapterPromises[i]; i++) &#123;</div><div class="line">      <span class="comment">// Wait for each chapter to be ready, then add it to the page</span></div><div class="line">      <span class="keyword">let</span> chapter = <span class="keyword">yield</span> chapterPromise;</div><div class="line">      addHtmlToPage(chapter.html);</div><div class="line">    &#125;</div><div class="line">    addTextToPage(<span class="string">"All done"</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">catch</span> (err) &#123;</div><div class="line">    <span class="comment">// try/catch just works, rejected promises are thrown here</span></div><div class="line">    addTextToPage(<span class="string">"Argh, broken: "</span> + err.message);</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">document</span>.querySelector(<span class="string">'.spinner'</span>).style.display = <span class="string">'none'</span>;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>  代码出现在promise文章里，<a href="https://developers.google.com/web/fundamentals/getting-started/primers/promises" target="_blank" rel="external">链接</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">spawn</span>(<span class="params">generatorFunc</span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">continuer</span>(<span class="params">verb, arg</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      result = generator[verb](arg);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(err);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (result.done) &#123;</span><br><span class="line">      <span class="keyword">return</span> result.value;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(result.value).then(callback, errback);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> generator = generatorFunc();</span><br><span class="line">  <span class="keyword">var</span> callback = continuer.bind(continuer, <span class="string">"next"</span>);</span><br><span class="line">  <span class="keyword">var</span> errback = continuer.bind(continuer, <span class="string">"throw"</span>);</span><br><span class="line">  <span class="keyword">return</span> callback();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">spawn(<span class="function"><span class="keyword">function</span> *(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  "use strict"</span>;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// 'yield' effectively does an async wait, returning the result of the promise</span></span><br><span class="line">    <span class="keyword">let</span> story = <span class="keyword">yield</span> getJson(<span class="string">'story.json'</span>);</span><br><span class="line">    addHtmlToPage(story.heading);</span><br><span class="line">    <span class="comment">// Map our array of chapter urls</span></span><br><span class="line">    <span class="comment">// to an array of chapter json promises.</span></span><br><span class="line">    <span class="comment">// This makes sure they all download parallel.</span></span><br><span class="line">    <span class="keyword">let</span> chapterPromises = story.chapterUrls.map(getJson);</span><br><span class="line">    <span class="comment">// Can't use chapterPromises.forEach, because yielding within doesn't work</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, chapterPromise; chapterPromise = chapterPromises[i]; i++) &#123;</span><br><span class="line">      <span class="comment">// Wait for each chapter to be ready, then add it to the page</span></span><br><span class="line">      <span class="keyword">let</span> chapter = <span class="keyword">yield</span> chapterPromise;</span><br><span class="line">      addHtmlToPage(chapter.html);</span><br><span class="line">    &#125;</span><br><span class="line">    addTextToPage(<span class="string">"All done"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">    <span class="comment">// try/catch just works, rejected promises are thrown here</span></span><br><span class="line">    addTextToPage(<span class="string">"Argh, broken: "</span> + err.message);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">document</span>.querySelector(<span class="string">'.spinner'</span>).style.display = <span class="string">'none'</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>  代码出现在promise文章里，<a href="https://developers.google.com/web/fundamentals/getting-started/primers/promises" target="_blank" rel="noopener">链接</a></p>
 <p>  有很多文章分析js方法的call apply bind的区别，这里就做简单的记录，call apply都是直接执行原来的方法，然后传递新对象以及参数，bind是生成一个新的函数。call与apply都是执行，但是还是有区别，主要是参数传递的不同，call用于传递确定个数的参数，而apply用于传递个数不确定的参数，用类似于数组的形式将参数传递进去，然后进行处理。</p>
 
       
@@ -379,8 +378,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/19/几个windows-linux应用推荐网址/" rel="next" title="几个windows/linux应用推荐网址">
-                <i class="fa fa-chevron-left"></i> 几个windows/linux应用推荐网址
+              <a href="/2017/04/17/MIUI解除ROOT授权25秒等待的方法/" rel="next" title="MIUI解除ROOT授权25秒等待的方法">
+                <i class="fa fa-chevron-left"></i> MIUI解除ROOT授权25秒等待的方法
               </a>
             
           </div>
@@ -389,8 +388,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/17/MIUI解除ROOT授权25秒等待的方法/" rel="prev" title="MIUI解除ROOT授权25秒等待的方法">
-                MIUI解除ROOT授权25秒等待的方法 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/19/几个windows-linux应用推荐网址/" rel="prev" title="几个windows/linux应用推荐网址">
+                几个windows/linux应用推荐网址 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -447,10 +446,8 @@
       
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="木兄" />
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="木兄">
           <p class="site-author-name" itemprop="name">木兄</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
@@ -461,7 +458,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -474,7 +471,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">55</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -513,7 +510,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy; 
   <span itemprop="copyrightYear">2018</span>
