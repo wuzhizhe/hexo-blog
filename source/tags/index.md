@@ -1,5 +1,5 @@
 ---
-title: All tags
-date: 2017-04-17 13:02:11
-comments: false
+title: tags
+date: 2018-12-25 12:06:12
+type: "tags"
 ---

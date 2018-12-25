@@ -178,9 +178,9 @@ addThis:
 # Comments System
 # ---------------
 disqus:
-  enable: false 
-  #shortname: 
-  #count: 
+  enable: true 
+  shortname: dazhizhe
+  count: true
 
 # laibili:
   # enable: false
